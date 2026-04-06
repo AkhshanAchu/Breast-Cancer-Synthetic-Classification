@@ -177,6 +177,12 @@ output/
 
 ## Architecture
 
-**Generator** · Conditional embedding → ConvTranspose2d stack (512→256→128→64→32→3) · Tanh output  
-**Discriminator** · Label map channel-concatenation → Conv2d stack (64→128→256→512→1) · InstanceNorm · Sigmoid  
-**Classifier** · EfficientNet-B0 (ImageNet pretrained) · Final FC replaced with Linear(1280, n_classes) · AdamW + CosineAnnealingLR
+| Component        | Details                                                                 |
+|------------------|-------------------------------------------------------------------------|
+| **Generator**     | Conditional embedding → ConvTranspose2d stack (512→256→128→64→32→3) → Tanh output |
+| **Discriminator** | Label map channel concatenation → Conv2d stack (64→128→256→512→1) → InstanceNorm → Sigmoid |
+| **Classifier**    | EfficientNet-B0 (ImageNet pretrained) → Final FC replaced with Linear(1280, n_classes) → AdamW + CosineAnnealingLR |
+
+---
+
+Made with ❤️ by NiceGuy
