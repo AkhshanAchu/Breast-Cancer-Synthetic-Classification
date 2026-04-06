@@ -1,0 +1,11 @@
+IMG_SIZE            = 64
+CLF_SIZE            = 224
+LATENT_DIM          = 256
+GAN_EPOCHS          = 10000
+CLF_EPOCHS          = 20
+BATCH_SIZE          = 16
+LR_G                = 2e-4
+LR_D                = 2e-4
+LR_CLF              = 1e-4
+SYNTHETIC_PER_CLASS = 200
+SEED                = 42
